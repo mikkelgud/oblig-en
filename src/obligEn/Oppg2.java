@@ -16,7 +16,7 @@ public class Oppg2 {
                 throw new IllegalStateException("Listen er ikke sortert!");
             }
 
-            if ( a[i-1] != a[i] && a[i] != a[i-1]){
+            if ( a[i-1] != a[i]){
                 teller++;
             }
         }
