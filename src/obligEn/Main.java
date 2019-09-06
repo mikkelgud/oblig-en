@@ -8,6 +8,5 @@ public class Main{
         System.out.println(ob1.antallUlikeSortert(a));
         System.out.println("Antall ombyttinger er "+ ob1.ombyttinger(a));
         System.out.println("Verdien til det største tallet i listen er "+ob1.maks(a));
-        System.out.println("Welcome to the project felix and jorgen, may the setup be in your favor");
         }
 }
