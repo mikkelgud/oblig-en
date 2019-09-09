@@ -12,7 +12,7 @@ public class Oppg3 {
         }
 
         for (int i = 1; i < a.length; i++){
-            if(a[i] == a[i-1]){
+            if(a[i] != a[i-1]){
                 teller++;
             }
         }
