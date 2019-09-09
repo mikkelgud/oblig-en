@@ -3,9 +3,12 @@
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
 
-Abdiramhan Hassan, Har ikke vært tilstede enda, kommer snart.
+Abdirahman Hassen, S326051, S326051@oslomet.no
+
 Jørgen Mobakken, S331352, s331352@oslomet.no
+
 Felix Anthonessen, S331372,   s331372@oslomet.no
+
 Mikkel Gudmundsen, S325869, s325869@oslomet.no
 
 # Arbeidsfordeling
