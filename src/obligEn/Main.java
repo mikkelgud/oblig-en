@@ -8,6 +8,7 @@ public class Main{
         System.out.println("Antall ombyttinger er "+ Oppg1.ombyttinger(a));
         System.out.println("Verdien til det største tallet i listen er "+Oppg1.maks(a));
 
+        //Ingen lett oppgave...
 
         }
 }
