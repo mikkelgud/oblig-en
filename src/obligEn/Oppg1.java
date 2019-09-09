@@ -11,6 +11,7 @@ public class Oppg1 {
         }
 
         int størsteTall = 0;
+
         for (int i = 1; i < a.length; i++){
             if(a[i] < a[i-1]){
                 int temp = a[i];
