@@ -3,9 +3,9 @@ package obligEn;
 public class Main{
     public static void main(String []args){
 
-        int[] a = {1,6,6,9,10,4,8};
+        int[] a = {1,2,3,20,-23,18,40,33,-40};
         char[] b = {'a','n','b','e','f'};
-        String h = "HEIiiiii";
+        String h = "HEIIIII";
         String k = "velkommenyess";
         //System.out.println("Verdien til det største tallet i listen er "+Oppg1.maks(a));
         //System.out.println("Antall ombyttinger er "+ Oppg1.ombyttinger(a));
