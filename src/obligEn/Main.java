@@ -3,7 +3,7 @@ package obligEn;
 public class Main{
     public static void main(String []args){
 
-        int[] a = {1,2,3,20,-23,18,40,33,-40};
+        int[] a = {-17 , -16 , 15 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
         char[] b = {'a','n','b','e','f'};
         String h = "HEIIIII";
         String k = "velkommenyess";
