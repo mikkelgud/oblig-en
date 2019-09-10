@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Oppg6 {
     public static void rotasjon(char[] a, int k){
+        k = k - 1;
         if (a.length == 1 || a.length == 0){
             System.out.println(Arrays.toString(a));
         }
