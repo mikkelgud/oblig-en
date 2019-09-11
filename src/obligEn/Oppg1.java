@@ -5,8 +5,11 @@ import java.util.NoSuchElementException;
 public class Oppg1 {
 
     public static int maks(int[] a) {
+        final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
+
+
         if (a.length < 1){
-            throw new NoSuchElementException("Tabellen er tom!");
+            throw new NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
         }
 
         int størsteTall = 0;
