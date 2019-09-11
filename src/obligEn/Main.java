@@ -14,6 +14,8 @@ public class Main{
         Oppg4.delsortering(a);
         Oppg5.rotasjon(b);
         Oppg6.rotasjon(b,2);
+        Oppg1.maks(a);
+        Oppg1.ombyttinger(a);
         System.out.println(Oppg7.flett(h,k));
 
 
