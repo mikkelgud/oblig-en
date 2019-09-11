@@ -19,5 +19,7 @@ public class Main{
         System.out.println(Oppg7.flett(h,k));*/
         Oppg8.indekssortering(a);
 
+
+
         }
 }
