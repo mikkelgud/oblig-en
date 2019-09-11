@@ -14,8 +14,8 @@ public class Oppg1 {
 
         for (int i = 1; i < a.length; i++){
             if(a[i] < a[i-1]){
-                int temp = a[i];
 
+                int temp = a[i];
                 a[i] = a[i-1];
                 a[i-1] = temp;
 

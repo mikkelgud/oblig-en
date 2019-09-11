@@ -15,7 +15,7 @@ Mikkel Gudmundsen, S325869, s325869@oslomet.no
 
 I oppgaven har vi hatt følgende arbeidsfordelinger:
  Vi har i fellesskap løst alle oppgavene i "sprinter" og diskuterte løsningene sammen. 
- Ny ideologisk konsept laget for, og av undertegnede studenter :)
+ 
  
  
 
