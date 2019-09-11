@@ -1,9 +1,11 @@
 package obligEn;
 
+import java.util.Arrays;
+
 public class Main{
     public static void main(String []args){
 
-        int[] a = {-17 , -16 , 15 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
+        int[] a = {-17 ,  15 ,-16 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
         char[] b = {'a','n','b','e','f'};
         String h = "HEIIIII";
         String k = "velkommenyess";
@@ -17,7 +19,7 @@ public class Main{
         Oppg1.maks(a);
         Oppg1.ombyttinger(a);
         System.out.println(Oppg7.flett(h,k));*/
-        Oppg8.indekssortering(a);
+        System.out.println(Arrays.toString(Oppg8.indekssortering(a)));
 
 
 
