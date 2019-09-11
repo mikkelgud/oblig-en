@@ -5,7 +5,6 @@ import java.util.NoSuchElementException;
 public class Oppg1 {
 
     public static int maks(int[] a) {
-
         if (a.length < 1){
             throw new NoSuchElementException("Tabellen er tom!");
         }
@@ -33,7 +32,6 @@ public class Oppg1 {
                 teller++;
 
                 int temp = a[i];
-
                 a[i] = a[i-1];
                 a[i-1] = temp;
             }

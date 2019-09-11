@@ -16,6 +16,17 @@ Mikkel Gudmundsen, S325869, s325869@oslomet.no
 I oppgaven har vi hatt følgende arbeidsfordelinger:
  Vi har i fellesskap løst alle oppgavene i "sprinter" og diskuterte løsningene sammen. 
  
+ Resterenede oppgaver:
  
+1. I oppgave 1 må vi svare på:
+●  Når blir det flest ombyttinger?
+●  Når blir det færrest?
+●  Hvor mange blir det i gjennomsnitt?
  
+2. Gjøre tester der det ikke er gjort se eksempel fra oppgave1 sin test.
 
+3. 
+Opggave 9 og 10.
+
+4.
+Evnt rydde kode og levere

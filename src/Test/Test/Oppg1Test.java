@@ -12,14 +12,14 @@ public class Oppg1Test {
     int testArrayNegative[] ={-12,-3,-13,-16};
 
     @Test
-    public void ReturnererMaksStørsteVerdiFraEtPositivtArray() {
+    public void returnererMaksStørsteVerdiFraEtPositivtArray() {
         int expected = 4453;
         int actualHigestNumberFromMethod = Oppg1.maks(testArray);
 
         Assertions.assertEquals( actualHigestNumberFromMethod, expected);
     }
     @Test
-    public void ReturnererMaksStørsteVerdiFraEtNegativeArray() {
+    public void returnererMaksStørsteVerdiFraEtNegativeArray() {
         int expected = -3;
         int actualHigestNumberFromMethod = Oppg1.maks(testArrayNegative);
 
@@ -32,6 +32,14 @@ public class Oppg1Test {
         int actualPermutations = Oppg1.ombyttinger(testArray);
 
         Assertions.assertEquals( actualPermutations, expectedPermutations);
-
     }
+
+    @Test
+    public void fårFunksjonRiktigOmbyttingerMedNegativeTall() {
+        int expectedPermutations = 2;
+        int actualPermutations = Oppg1.ombyttinger(testArrayNegative);
+
+        Assertions.assertEquals( actualPermutations, expectedPermutations);
+    }
+
 }
