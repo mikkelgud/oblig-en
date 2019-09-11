@@ -16,6 +16,7 @@ public class Oppg8 {
 
         System.out.println(Arrays.toString(indeks));
 
+
         return indeks;
     }
 
