@@ -17,6 +17,7 @@ public class Main{
         Oppg1.maks(a);
         Oppg1.ombyttinger(a);
         System.out.println(Oppg7.flett(h,k));
-        System.out.println("Halla boy");
+
+        System.out.println("Halla b");
         }
 }
