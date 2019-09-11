@@ -8,7 +8,8 @@ public class Oppg4{
 
        int oddeTallCount = 0;
 
-       Arrays.sort(a);
+       Oppg1.maks(a);
+       System.out.println(Arrays.toString(a));
 
        for (int i = 0; i < a.length; i++){
            if ((a[i] & 1) != 0) {
@@ -17,7 +18,6 @@ public class Oppg4{
        }
 
       for (int i = 0; i < a.length; i++) {
-
        for (int j = 0; j < a.length - 1; j++) {
            if (((a[j + 1] % 2) != 0) && (a[j] < a[j + 1])) {   //Sender oddetallene til venstre i tabellen,
                int temp = a[j + 1];                            //Samtidig sendes partallene til høyre.
@@ -26,7 +26,9 @@ public class Oppg4{
            }
        }
    }
+   // Bruker Array.sort for å sortere oddetallene.
    Arrays.sort(a, 0, oddeTallCount);
+
 
        System.out.println(Arrays.toString(a));
 
