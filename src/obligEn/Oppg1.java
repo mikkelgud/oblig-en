@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 public class Oppg1 {
 
     public static int maks(int[] a) {
+
         final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
 
 
@@ -12,19 +13,17 @@ public class Oppg1 {
             throw new NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
         }
 
-        int størsteTall = 0;
+        int biggestNumber = 0;
 
         for (int i = 1; i < a.length; i++){
             if(a[i] < a[i-1]){
-
                 int temp = a[i];
                 a[i] = a[i-1];
                 a[i-1] = temp;
-
             }
-            størsteTall = a[i];
+            biggestNumber = a[i];
         }
-        return størsteTall;
+        return biggestNumber;
     }
 
     public static int ombyttinger(int[] a){
