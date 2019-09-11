@@ -11,13 +11,13 @@ public class Main{
         //System.out.println("Antall ombyttinger er "+ Oppg1.ombyttinger(a));
         //System.out.println("Antall ulike sorter er "+Oppg2.antallUlikeSortert(a));
         //System.out.println("Antall ulike tall er "+Oppg3.antallUlikeSortert(a));
-        Oppg4.delsortering(a);
+       /* Oppg4.delsortering(a);
         Oppg5.rotasjon(b);
         Oppg6.rotasjon(b,2);
         Oppg1.maks(a);
         Oppg1.ombyttinger(a);
-        System.out.println(Oppg7.flett(h,k));
-
+        System.out.println(Oppg7.flett(h,k));*/
+        Oppg8.indekssortering(a);
 
         }
 }
