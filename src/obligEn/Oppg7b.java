@@ -5,7 +5,9 @@ public class Oppg7b {
         StringBuilder a = new StringBuilder();
 
         for(int i = 0; i > s.length; i++){
-            a.append(s[i]);
+            if(s.length < i) {
+                a.append(s[i].charAt(i));
+            }
         }
 
         return a.toString();
