@@ -17,6 +17,7 @@ public class Oppg9 {
 
         Oppg8.indekssortering(returTabell);
 
+
         //hjelpevariabler
         int tredjeMinst = a[returTabell[2]];
         int nestMin = a[returTabell[1]];
