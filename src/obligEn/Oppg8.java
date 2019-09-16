@@ -1,7 +1,5 @@
 package obligEn;
 
-import java.util.Arrays;
-
 public class Oppg8 {
 
     public static int[] indekssortering(int[] a) {

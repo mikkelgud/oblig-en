@@ -22,7 +22,7 @@ public class Main{
         System.out.println(Oppg7.flett(h,k));*/
         //System.out.println(Arrays.toString(Oppg8.indekssortering(a)));
         System.out.println(Oppg7b.flett(l));
-
+        System.out.println(Arrays.toString(Oppg9.tredjeMin(a)));
 
         }
 }
