@@ -27,6 +27,7 @@ I oppgaven har vi hatt følgende arbeidsfordelinger:
 
 3. 
 Opggave 9 og 10.
+oppg 7b.
 
 4.
 Evnt rydde kode og levere

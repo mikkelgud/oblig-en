@@ -7,6 +7,7 @@ public class Main{
 
         int[] a = {-17 ,  15 ,-16 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
         char[] b = {'a','n','b','e','f'};
+        String l = "AM "+"L"+"GEDS"+"ORATKRR"+""+"R TRTE"+"IO"+"TGAUU";
         String h = "HEIIIII";
         String k = "velkommenyess";
         //System.out.println("Verdien til det største tallet i listen er "+Oppg1.maks(a));
@@ -19,8 +20,8 @@ public class Main{
         Oppg1.maks(a);
         Oppg1.ombyttinger(a);
         System.out.println(Oppg7.flett(h,k));*/
-        System.out.println(Arrays.toString(Oppg8.indekssortering(a)));
-
+        //System.out.println(Arrays.toString(Oppg8.indekssortering(a)));
+        System.out.println(Oppg7b.flett(l));
 
 
         }
