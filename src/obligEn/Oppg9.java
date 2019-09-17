@@ -5,13 +5,13 @@ import java.util.NoSuchElementException;
 public class Oppg9 {
     public static int[] tredjeMin(int[] a){
 
-        final String NO_ENOUGH_ELEMENTS_EXCEPTION_MESSAGE = "Tabellen (a) må inneholde 3 eller flere tall!";
+        final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
+
         int arrayLength = a.length;
 
-        if (arrayLength < 3){
-            throw new NoSuchElementException(NO_ENOUGH_ELEMENTS_EXCEPTION_MESSAGE);
+        if ( arrayLength < 1 ){
+            throw new NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
         }
-
 
 
         int[] returTabell = new int[3];
@@ -33,19 +33,25 @@ public class Oppg9 {
         int nestMin = a[returTabell[1]];
         int min = a[returTabell[0]];
 
+        if (a.length < 3){
+            throw new NoSuchElementException("Tabellen (a) må inneholde 3 eller flere tall!");
+        }
 
-
-        for (int i = 3; i < arrayLength; i++){
+        for (int i = 3; i < a.length; i++){
             if (a[i] < tredjeMinst){
                if (a[i] < nestMin){
                    if (a[i] < min){
                        returTabell[1] = returTabell[0];
                        returTabell[2] = returTabell[1];
                        returTabell[0] = i;
+
                    }
                }
             }
+
+
         }
+
         return returTabell;
     }
 }
