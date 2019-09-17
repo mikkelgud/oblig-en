@@ -1,5 +1,7 @@
 package copiedTests;
 
+import org.junit.jupiter.api.Assertions;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -20,7 +22,7 @@ class Oblig1UnitTest {
 
     @org.junit.jupiter.api.Test
     void antallUlikeSortert() {
-        assertEquals(true, false, "Implementer antallUlikeSortert og denne testen");
+        Assertions.assertEquals(true, false, "Implementer antallUlikeSortert og denne testen");
     }
 
     @org.junit.jupiter.api.Test
