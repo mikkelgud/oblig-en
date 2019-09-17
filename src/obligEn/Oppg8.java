@@ -5,20 +5,23 @@ import java.util.Arrays;
 public class Oppg8 {
 
     public static int[] indekssortering(int[] a) {
+        int aLenght = a.length;
 
-        int[] indeks = new int[a.length];
+        int[] indeks = new int[aLenght];
+        int[] tmp = new int[aLenght];
+        tmp = a;
 
         //Setter en verdi lik max av det en int kan være.
         final int MAX_VALUE_OF_AN_INTEGER = Integer.MAX_VALUE;
 
         //Iterer gjennom for hvert ledd av arrayet.
-        for (int i = 0; i < a.length; i++){
+        for (int i = 0; i < aLenght; i++){
             //Finner indeksen til minste verdi
             int currentMinIndex = findMin(a);
             //Setter indeks sitt i´te ledd til iterasjonens index hentet fra findMin() metoden.
             indeks[i] = currentMinIndex;
             //Skifter ut det nåverende laveste leddet med et teit høyt tall.
-            a[currentMinIndex] = MAX_VALUE_OF_AN_INTEGER;
+            tmp[currentMinIndex] = MAX_VALUE_OF_AN_INTEGER;
         }
         return indeks;
     }
