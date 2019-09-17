@@ -11,3 +11,4 @@ public class oppg10 {
         return true;
     }
 }
+
