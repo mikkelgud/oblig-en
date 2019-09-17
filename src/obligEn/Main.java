@@ -5,7 +5,9 @@ import java.util.Arrays;
 public class Main{
     public static void main(String []args){
 
-       // int[] a = {-17 ,  15 ,-16 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
+       int[] a = {-17 ,  15 ,-16 , 18 , 29 , 10 , 19 , 22 , -20 ,  6};
+       String c = "ABRAKADABRA";
+       String d = "BAAB";
       //  char[] b = {'a','n','b','e','f'};
         String[] l = {"AM ", "L", "GEDS", "ORATKRR", "", "R TRTE", "IO", "TGAUU"};
       //  String h = "HEIIIII";
@@ -23,6 +25,6 @@ public class Main{
         //System.out.println(Arrays.toString(Oppg8.indekssortering(a)));
         System.out.println(Oppg7b.flett(l));
         //System.out.println(Arrays.toString(Oppg9.tredjeMin(a)));
-
+        System.out.println(oppg10.inneholdt(c,d));
         }
 }
