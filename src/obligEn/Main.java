@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Main{
     public static void main(String []args){
 
+        int[] c= {-4, -1, 3, 0, 2, -3, -2, 4, 1};
         int[] a = {-17 ,  -15 ,-16 , -18 , -29 , -10 , -19 , -22 , -20 ,  -6};
         char[] b = {'a','n','b','e','f'};
         String[] l = {"AM ", "L", "GEDS", "ORATKRR", "", "R TRTE", "IO", "TGAUU"};
@@ -24,6 +25,10 @@ public class Main{
         System.out.println(Oppg7b.flett(l));
         //System.out.println(Arrays.toString(Oppg9.tredjeMin(a)));
          Oppg4.delsortering(a);
+         Oblig1.delsortering(c);
+
+        System.out.println(Arrays.toString(c));
+
 
         }
 }

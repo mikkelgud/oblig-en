@@ -4,32 +4,66 @@ import java.util.Arrays;
 
 public class Oppg4{
 
-   public static void delsortering(int []a) {
+    public static void delsortering(int[]a) {
+        //INSTANSIERER trengende veridier og hjelpevariabler.
+        int aLength = a.length;
+        int oddNumbers = 0;
+        int evenNumbers = 0;
+        int tmp = 0;
 
-       int oddeTallCount = 0;
+        //Sorterer hele listen jeg får inn
+        quickSort(a, 0, aLength-1);
+//       //Sjekker gjennom hele arrayet med en for-løkke
+        for(int i = 0; i < aLength; i++){
+            if (a[i]%2 == 0){    //Sjekker om tallet er partall
+                evenNumbers++;
+            }else{                  //Dersom det ikke er setter jeg verdiene fra første til n'te posisjon i arrayet.
+                tmp = a[i];
+                a[i] = a[oddNumbers];
+                a[oddNumbers] = tmp;
+                oddNumbers++;
+            }
+        }
+        //Sorterer oddetallene og partallene separat.
+        quickSort(a, 0, oddNumbers-1);
+        quickSort(a, evenNumbers, aLength-1);
+    }
 
-       Arrays.sort(a);
+    //Implementerer metode for quick-sort med left og right pekere.
+    public static void quickSort(int[]a, int l, int r){
+        //Sjekker om left er større enn right.
+        if (l < r) {
+            int partitionIndex = partition(a, l, r);
 
-       for (int i = 0; i < a.length; i++){
-           if ((a[i] & 1) != 0) {
-               oddeTallCount++;
-           }
-       }
+            //Bruker rekursjon til å sortere
+            quickSort(a, l, partitionIndex - 1);
+            quickSort(a, partitionIndex + 1, r);
+        }
+    }
 
-      for (int i = 0; i < a.length; i++) {
 
-       for (int j = 0; j < a.length - 1; j++) {
-           if (((a[j + 1] % 2) != 0) && (a[j] < a[j + 1])) {   //Sender oddetallene til venstre i tabellen,
-               int temp = a[j + 1];                            //Samtidig sendes partallene til høyre.
-               a[j + 1] = a[j];
-               a[j] = temp;
-           }
-       }
-   }
-   // Bruker Array.sort for å sortere oddetallene.
-   Arrays.sort(a, 0, oddeTallCount);
+    public static int partition(int[] a, int begin, int end){
+        //Bruker pivoten til å dividere listen inn til to lister.
+        int pivot = a[end];
+        //instansierer i til posisjonen bak starten av arrayet
+        int i = (begin-1);
+//itererer gjennom arrayer fra start til slutt
+        for (int j = begin; j < end; j++) {
+            //sjekker oma arrayets nåværende posisjon er mindre eller lik pivoten og endrer partiationIndexen +1 og flytter deretter tall på riktig plass
+            if (a[j] <= pivot) {
+                i++;
 
-       System.out.println(Arrays.toString(a));
+                int swapTmp = a[i];
+                a[i] = a[j];
+                a[j] = swapTmp;
+            }
+        }
+//bytter til slutt om posisjonen til neste ledd og siste ledd.]
+        int swapTmp = a[i+1];
+        a[i+1] = a[end];
+        a[end] = swapTmp;
+//returnerer indexen.
+        return i+1;
+    }
 
-   }
 }
