@@ -289,8 +289,7 @@ public class Oblig1Test {
         }
 
         if (!Arrays.equals(a, b)) {
-            System.out.println
-                    ("Oppgave 4: l) Metoden gjør feil for negative verdier!");
+            System.out.println("Oppgave 4: l) Metoden gjør feil for negative verdier!");
             antallFeil++;
         }
 
@@ -488,6 +487,7 @@ public class Oblig1Test {
 
     ///// Oppgave 7 //////////////////////////////////////
     @org.junit.jupiter.api.Test
+
     void oppgave7() {
         int antallFeil = 0;
         String s = null;

@@ -12,13 +12,13 @@ public class Oblig1 {
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
         final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
-
+        int biggestNumber = 0;
 
         if (a.length < 1){
             throw new NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
+        }else if(a.length == 1){
+            biggestNumber = a[0];
         }
-
-        int biggestNumber = 0;
 
         for (int i = 1; i < a.length; i++){
             if(a[i] < a[i-1]){
@@ -96,33 +96,64 @@ public class Oblig1 {
     }
 
     ///// Oppgave 4 //////////////////////////////////////
-    public static void delsortering(int[] a) {
+    public static void delsortering(int[]a) {
+        int aLength = a.length;
+        int oddNumbers = 0;
+        int evenNumbers = 0;
+        int tmp = 0;
 
-        int oddeTallCount = 0;
 
-        Arrays.sort(a);
 
-        for (int i = 0; i < a.length; i++){
-            if ((a[i] & 1) != 0) {
-                oddeTallCount++;
+       quickSort(a, 0, aLength-1);
+        for(int i = 0; i < aLength; i++){
+            if (a[i]%2 == 0){
+                evenNumbers++;
+            }else{
+                tmp = a[i];
+                a[i] = a[oddNumbers];
+                a[oddNumbers] = tmp;
+                oddNumbers++;
             }
         }
-
-        for (int i = 0; i < a.length; i++) {
-
-            for (int j = 0; j < a.length - 1; j++) {
-                if (((a[j + 1] % 2) != 0) && (a[j] < a[j + 1])) {   //Sender oddetallene til venstre i tabellen,
-                    int temp = a[j + 1];                            //Samtidig sendes partallene til høyre.
-                    a[j + 1] = a[j];
-                    a[j] = temp;
-                }
-            }
-        }
-        // Bruker Array.sort for å sortere oddetallene.
-        Arrays.sort(a, 0, oddeTallCount);
+        quickSort(a, 0, oddNumbers-1);
+        quickSort(a, evenNumbers, aLength-1);
 
         System.out.println(Arrays.toString(a));
     }
+
+
+    public static void quickSort(int[]a, int l, int r){
+        if (l < r) {
+            int partitionIndex = partition(a, l, r);
+
+
+            quickSort(a, l, partitionIndex - 1);
+            quickSort(a, partitionIndex + 1, r);
+        }
+    }
+
+
+    public static int partition(int[] a, int begin, int end){
+        int pivot = a[end];
+        int i = (begin-1);
+
+        for (int j = begin; j < end; j++) {
+            if (a[j] <= pivot) {
+                i++;
+
+                int swapTemp = a[i];
+                a[i] = a[j];
+                a[j] = swapTemp;
+            }
+        }
+
+        int swapTemp = a[i+1];
+        a[i+1] = a[end];
+        a[end] = swapTemp;
+
+        return i+1;
+    }
+
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
@@ -149,13 +180,18 @@ public class Oblig1 {
 
     ///// Oppgave 6 //////////////////////////////////////
     public static void rotasjon(char[] a, int k) {
-        k = k - 1;
-        if (a.length == 1 || a.length == 0){
-            System.out.println(Arrays.toString(a));
-        }
-        int n = a.length;  if (n < 2){
+        int n = a.length;
+        final int MAX_CHANGES = 5000;
+        final int MIN_CHANGES = -5000;
+
+        if (k > MAX_CHANGES || k < MIN_CHANGES){
             return;
         }
+
+        if (n < 2){
+            return;
+        }
+
         if ((k %= n) < 0){
             k += n;
         }
@@ -165,7 +201,6 @@ public class Oblig1 {
             a[i] = a[i - k];
         }
         System.arraycopy(b, 0, a, 0, k);
-
         System.out.println(Arrays.toString(a));
     }
 
@@ -221,39 +256,47 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
-        int[] indeks = new int[a.length];
+        int aLenght = a.length;
+
+        int[] indeks = new int[aLenght];
+        int[] tmp=  a.clone();
+
 
         //Setter en verdi lik max av det en int kan være.
         final int MAX_VALUE_OF_AN_INTEGER = Integer.MAX_VALUE;
 
         //Iterer gjennom for hvert ledd av arrayet.
-        for (int i = 0; i < a.length; i++){
+        for (int i = 0; i < aLenght; i++){
             //Finner indeksen til minste verdi
-            int currentMinIndex = findMin(a);
+            int currentMinIndex = findMin(tmp);
             //Setter indeks sitt i´te ledd til iterasjonens index hentet fra findMin() metoden.
             indeks[i] = currentMinIndex;
             //Skifter ut det nåverende laveste leddet med et teit høyt tall.
-            a[currentMinIndex] = MAX_VALUE_OF_AN_INTEGER;
+            tmp[currentMinIndex] = MAX_VALUE_OF_AN_INTEGER;
         }
         return indeks;
     }
 
-    public static int findMin(int[] a) {
+
+    public static int findMin(int[] a){
         //Bruker min som hjelpevariabel for å holde på verdien til current index.
         int min = a[0];
         //Instansierer 1. index til 0.
         int currentMinIndex = 0;
 
         //Itererer gjennom alle tall i listen.
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < a.length; i++){
             // Sjekker om arrayet til i'te posisjon er mindre enn det nåværende minste tallet. Og setter dette til det nye minste tallet og tar vare på indeksen.
-            if (a[i] < min) {
+            if (a[i] < min){
                 currentMinIndex = i;
                 min = a[i];
             }
         }
         return currentMinIndex;
     }
+
+
+
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
