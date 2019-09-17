@@ -98,33 +98,25 @@ public class Oblig1 {
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[]a) {
         int aLength = a.length;
-        final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
+        int oddNumbers = 0;
+        int evenNumbers = 0;
+        int tmp = 0;
 
-        if (aLength < 1){
-         throw new  NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
-        }
 
-        int oddeTallCount = 0;
 
-        quickSort(a, 0, aLength-1);
-
-        for (int i = 0; i < aLength; i++){
-            if (a[i]%2 == 1) {
-                oddeTallCount++;
+       quickSort(a, 0, aLength-1);
+        for(int i = 0; i < aLength; i++){
+            if (a[i]%2 == 0){
+                evenNumbers++;
+            }else{
+                tmp = a[i];
+                a[i] = a[oddNumbers];
+                a[oddNumbers] = tmp;
+                oddNumbers++;
             }
         }
-
-        for (int i = 0; i < aLength; i++) {
-            for (int j = 0; j < aLength - 1; j++) {
-                if (((a[j + 1] % 2) != 0) && (a[j] < a[j + 1])) {   //Sender oddetallene til venstre i tabellen,
-                    int temp = a[j + 1];                            //Samtidig sendes partallene til høyre.
-                    a[j + 1] = a[j];
-                    a[j] = temp;
-                }
-               }
-        }
-        // Bruker Array.sort for å sortere oddetallene.
-       quickSort(a, 0, oddeTallCount);
+        quickSort(a, 0, oddNumbers-1);
+        quickSort(a, evenNumbers, aLength-1);
 
         System.out.println(Arrays.toString(a));
     }
