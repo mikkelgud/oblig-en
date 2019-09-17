@@ -196,7 +196,7 @@ public class Oblig1 {
             return;
         }
 
-        if (n < 2){
+        if (n < 2){  //så lenge arrayet har mindre en 2 elementer skal den bare returnere arrayet vanlig ugjort
             return;
         }
 
@@ -227,7 +227,8 @@ public class Oblig1 {
             }
         }
 
-        return a.toString();    }
+        return a.toString();
+    }
 
     /// 7b)
     public static String flett(String... s) {
