@@ -488,6 +488,7 @@ public class Oblig1Test {
 
     ///// Oppgave 7 //////////////////////////////////////
     @org.junit.jupiter.api.Test
+
     void oppgave7() {
         int antallFeil = 0;
         String s = null;

@@ -24,8 +24,6 @@ public class Oppg5 {
 
         System.out.println(Arrays.toString(a));
     }
-
-
 }
 
 
