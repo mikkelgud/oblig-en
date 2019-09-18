@@ -28,18 +28,18 @@ public class Oppg9 {
         Oppg8.indekssortering(returTabell);
 
 
-        //hjelpevariabler
-        int tredjeMinst = a[returTabell[2]];
-        int nestMin = a[returTabell[1]];
-        int min = a[returTabell[0]];
+        //instansierer hjelpevariabler fførste andre og tredje
+        int third = a[s];
+        int second = a[nm];
+        int min = a[m];
 
         if (a.length < 3){
             throw new NoSuchElementException("Tabellen (a) må inneholde 3 eller flere tall!");
         }
 
         for (int i = 3; i < a.length; i++){
-            if (a[i] < tredjeMinst){
-               if (a[i] < nestMin){
+            if (a[i] < third){
+               if (a[i] < second){
                    if (a[i] < min){
                        returTabell[1] = returTabell[0];
                        returTabell[2] = returTabell[1];

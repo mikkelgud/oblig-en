@@ -499,6 +499,7 @@ public class Oblig1Test {
             System.out.println
                     ("Oppgave 7a: a) Skal ikke kaste unntak for to tomme tegnstrenger!!");
             antallFeil++;
+
         }
 
         if (s.compareTo("") != 0) {
