@@ -361,32 +361,27 @@ public class Oblig1 {
 
 
     ///// Oppgave 10 //////////////////////////////////////
-    public static int bokstavNr(char bokstav) {
-return 1;
-    }
-
     public static boolean inneholdt(String a, String b) {
-        int arrayCountA[] =  getArrayCount(a);
-        int arrayCountB[] =  getArrayCount(b);
+
+        int arrayCountA[] =  getArrayCount(a.split(""));
+        int arrayCountB[] =  getArrayCount(b.split(""));
 
 
-        for(int i = 0; i < arrayCountA.length; i++){
-            if (arrayCountA[i] <= arrayCountB[i]){
-            }else{
+        for(int i = 0; i < 29; i++){
+            if (arrayCountA[i] > arrayCountB[i]){
                 return false;
             }
         } return true;
     }
 
-    public static int[] getArrayCount(String word){
-
+    public static int[] getArrayCount(String[] word){
         int[] alfabetArrayCount = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
         String[] alfabetArray = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K","L","M","N","O","P","Q" ,"R", "S", "T", "U", "V","W", "X","Y","Z", "Æ", "Ø", "Å" };
-        String []arrraySplit = word.split("");
 
-        for (int i = 0; i < arrraySplit.length; i++){
-            for (int j = 0;  j < alfabetArrayCount.length; j++)
-            if(arrraySplit[i].contains(alfabetArray[j])) {
+
+        for (int i = 0; i < word.length; i++){
+            for (int j = 0;  j < 29; j++)
+            if(word[i].equals(alfabetArray[j])) {
                 alfabetArrayCount[j]++;
                 break;
             }
@@ -396,33 +391,3 @@ return 1;
     }
 
 }  // Oblig1
-
-//    int A = 0;
-//        int B = 0;
-//        int C = 0;
-//        int D = 0;
-//        int E = 0;
-//        int F = 0;
-//        int G = 0;
-//        int H = 0;
-//        int I = 0;
-//        int J = 0;
-//        int K = 0;
-//        int L = 0;
-//        int M = 0;
-//        int N = 0;
-//        int O = 0;
-//        int P = 0;
-//        int Q = 0;
-//        int R = 0;
-//        int S = 0;
-//        int T = 0;
-//        int U = 0;
-//        int V = 0;
-//        int W = 0;
-//        int X = 0;
-//        int Y = 0;
-//        int Z = 0;
-//        int Æ = 0;
-//        int Ø = 0;
-//        int Å = 0;
