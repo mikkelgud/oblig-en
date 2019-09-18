@@ -10,6 +10,8 @@ import java.util.NoSuchElementException;
 
 
 public class Oblig1 {
+    public static final int NUMBERS_OF_WORDS_IN_ALFABET = 29;
+
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
         final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
@@ -362,12 +364,10 @@ public class Oblig1 {
 
     ///// Oppgave 10 //////////////////////////////////////
     public static boolean inneholdt(String a, String b) {
-
         int arrayCountA[] =  getArrayCount(a.split(""));
         int arrayCountB[] =  getArrayCount(b.split(""));
 
-
-        for(int i = 0; i < 29; i++){
+        for(int i = 0; i < NUMBERS_OF_WORDS_IN_ALFABET ; i++){
             if (arrayCountA[i] > arrayCountB[i]){
                 return false;
             }
@@ -375,15 +375,15 @@ public class Oblig1 {
     }
 
     public static int[] getArrayCount(String[] word){
-        int[] alfabetArrayCount = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        int[] alfabetArrayCount = new int[NUMBERS_OF_WORDS_IN_ALFABET];
         String[] alfabetArray = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K","L","M","N","O","P","Q" ,"R", "S", "T", "U", "V","W", "X","Y","Z", "Æ", "Ø", "Å" };
 
-
         for (int i = 0; i < word.length; i++){
-            for (int j = 0;  j < 29; j++)
-            if(word[i].equals(alfabetArray[j])) {
+            for (int j = 0;  j < NUMBERS_OF_WORDS_IN_ALFABET; j++) {
+                if (word[i].equals(alfabetArray[j])) {
                 alfabetArrayCount[j]++;
                 break;
+                }
             }
         }
 
