@@ -3,55 +3,52 @@ package obligEn;
 import java.util.NoSuchElementException;
 
 public class Oppg9 {
-    public static int[] tredjeMin(int[] a){
-
-        final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be no elements in the given array";
+    public static int[] tredjeMin(int[] a) {
+        final String NO_SUCH_ELEMENT_EXCEPTION_MESSAGE = "There seams to be not enpugh elements in the given array";
 
         int arrayLength = a.length;
 
-        if ( arrayLength < 1 ){
+        if ( arrayLength < 3 ){
             throw new NoSuchElementException(NO_SUCH_ELEMENT_EXCEPTION_MESSAGE);
         }
 
-
-        int[] returTabell = new int[3];
-
-        //index til de 3 minste tallene
-        int m = 0;
-        int nm = 1;
-        int s = 2;
-
-        returTabell[0] = a[m];
-        returTabell[1] = a[nm];
-        returTabell[2] = a[s];
-
-        Oppg8.indekssortering(returTabell);
+        int[] returnArray = {0,1,2};
 
 
-        //instansierer hjelpevariabler fførste andre og tredje
-        int third = a[s];
-        int second = a[nm];
-        int min = a[m];
+        returnArray[0] = a[returnArray[0]];
+        returnArray[1] = a[returnArray[1]];
+        returnArray[2] = a[returnArray[2]];
 
-        if (a.length < 3){
-            throw new NoSuchElementException("Tabellen (a) må inneholde 3 eller flere tall!");
-        }
+        returnArray = Oppg8.indekssortering(returnArray);
 
-        for (int i = 3; i < a.length; i++){
-            if (a[i] < third){
-               if (a[i] < second){
-                   if (a[i] < min){
-                       returTabell[1] = returTabell[0];
-                       returTabell[2] = returTabell[1];
-                       returTabell[0] = i;
 
-                   }
-               }
+        //hjelpevariabler
+        int tredjeMinst = returnArray[2];
+        int nestMin = returnArray[1];
+        int min = returnArray[0];
+
+
+        for (int i = 3; i < arrayLength; i++){
+            if (a[i] < a[tredjeMinst]){
+                if (a[i] < a[nestMin]){
+                    if(a[i] < a[min]){
+                        tredjeMinst = nestMin;
+                        nestMin = min;
+                        min = i;
+                    }else{
+                        tredjeMinst = nestMin;
+                        nestMin = i;
+                    }
+                }else{
+                    tredjeMinst = i;
+                }
             }
-
-
         }
 
-        return returTabell;
+        returnArray[0] = min;
+        returnArray[1] = nestMin;
+        returnArray[2] = tredjeMinst;
+
+        return returnArray;
     }
 }

@@ -1,8 +1,7 @@
 package obligEn;
 
 public class Oppg2 {
-    public static int antallUlikeSortert(int[] a){
-
+    public static int antallUlikeSortert(int[] a) {
         final String ILLIGALSTATE_EXCEPTION_MESSAGE = "Array must be sorted for usage of this method";
 
         int teller = 1;
@@ -22,4 +21,6 @@ public class Oppg2 {
         }
         return teller;
     }
+
+
 }

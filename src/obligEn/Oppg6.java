@@ -3,14 +3,19 @@ package obligEn;
 import java.util.Arrays;
 
 public class Oppg6 {
-    public static void rotasjon(char[] a, int k){
-        k = k - 1;
-        if (a.length == 1 || a.length == 0){
-            System.out.println(Arrays.toString(a));
-        }
-        int n = a.length;  if (n < 2){
+    public static void rotasjon(char[] a, int k) {
+        int n = a.length;
+        final int MAX_CHANGES = 5000;
+        final int MIN_CHANGES = -5000;
+
+        if (k > MAX_CHANGES || k < MIN_CHANGES){
             return;
         }
+
+        if (n < 2){  //så lenge arrayet har mindre en 2 elementer skal den bare returnere arrayet vanlig ugjort
+            return;
+        }
+
         if ((k %= n) < 0){
             k += n;
         }
@@ -20,7 +25,7 @@ public class Oppg6 {
             a[i] = a[i - k];
         }
         System.arraycopy(b, 0, a, 0, k);
-
         System.out.println(Arrays.toString(a));
     }
+
 }

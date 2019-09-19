@@ -8,8 +8,8 @@ public class Oppg8 {
         int aLenght = a.length;
 
         int[] indeks = new int[aLenght];
-        int[] tmp = new int[aLenght];
-        tmp = a;
+        int[] tmp=  a.clone();
+
 
         //Setter en verdi lik max av det en int kan være.
         final int MAX_VALUE_OF_AN_INTEGER = Integer.MAX_VALUE;
@@ -17,7 +17,7 @@ public class Oppg8 {
         //Iterer gjennom for hvert ledd av arrayet.
         for (int i = 0; i < aLenght; i++){
             //Finner indeksen til minste verdi
-            int currentMinIndex = findMin(a);
+            int currentMinIndex = findMin(tmp);
             //Setter indeks sitt i´te ledd til iterasjonens index hentet fra findMin() metoden.
             indeks[i] = currentMinIndex;
             //Skifter ut det nåverende laveste leddet med et teit høyt tall.

@@ -49,6 +49,12 @@ public class Oblig1 {
         return teller;
     }
 
+    //Når blir det flest ombyttinger?
+//    Det blir flest ombyttninger om arrayet er sortert "feil vei". DVS fra minst til størst.
+    // Når blir det færrest?
+//    når listen er sortert "riktig vei", DVS fra størst til minst
+
+
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
         final String ILLIGALSTATE_EXCEPTION_MESSAGE = "Array must be sorted for usage of this method";

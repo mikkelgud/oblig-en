@@ -1,9 +1,7 @@
 package obligEn;
 
 public class Oppg3 {
-
-    public static int antallUlikeSortert(int[] a){
-
+    public static int antallUlikeUsortert(int[] a) {
         int teller = 0;
 
         if (a.length == 0){
@@ -26,5 +24,4 @@ public class Oppg3 {
 
         return teller;
     }
-
 }
